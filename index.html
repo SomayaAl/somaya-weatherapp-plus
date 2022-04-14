@@ -11,13 +11,13 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="src/index.js"></script>
+		<link rel="stylesheet" href="src/style.css" />
+	
     <script
       src="https://kit.fontawesome.com/16c6c84f23.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
   </head>
   <body>
     <div class="container">
@@ -41,8 +41,8 @@
             />
           </div>
           <div class="col-1">
-            <button class="current-location-button">
-              <i class="fa-solid fa-location-dot"> </i>
+            <button  class="btn btn-link" id="current-location-button"> 
+              <i class="fa-solid fa-location-dot" id="current-button"> </i> 
             </button>
           </div>
         </div>
@@ -54,7 +54,7 @@
           <h1>Washington DC</h1>
         </div>
         <div class="col-6">
-          <span class="temp"><span class="emoji">☀️</span> 75 </span> <span class="units"> °C | °F </span></h2>
+          <span class="temp" id="temp"><span class="emoji">☀️</span> 75</span> <span class="units"> <a href="#" id="celsius-link" />°C </a>| <a href="#" id="fahrenheit-link" /> °F </a> </span>
         </div>
       </div>
       <div class="row">
@@ -64,7 +64,7 @@
       </div>
       <div class="weather-app">
         <div class="row">
-          <div class="col-6">Sunny</div>
+          <div class="col-6"> <span id="description"> Sunny </span> </div>
         </div>
         <div class="row">
           <div class="col-6">High: 78<span class="degrees">°C | °F</span></div>
@@ -112,13 +112,14 @@
         <br />
         <div class="row">
           <div class="col-6">Sunrise: 6:55AM</div>
-          <div class="col-6">Precipitation: 3%</div>
+          <div class="col-6">Humidity: <span id="humidity"></span>%</div>
         </div>
         <div class="row">
           <div class="col-6">Sunset: 7:28PM</div>
-          <div class="col-6">Wind: 5mph</div>
+          <div class="col-6">Wind: <span id="wind"> 5mph </span> </div>
         </div>
       </div>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

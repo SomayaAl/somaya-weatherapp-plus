@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/16c6c84f23.js"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <div class="container">
+      <form id="find-weather">
+        <div class="row">
+          <div class="col-8">
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="City or Zip Code"
+              autofocuse="on"
+              id="city-text-input"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              class="form-control form-control-lg"
+              type="submit"
+              value="Search"
+              id="search-button"
+            />
+          </div>
+          <div class="col-1">
+            <button class="current-location-button">
+              <i class="fa-solid fa-location-dot"> </i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-6">
+          <h1>Washington DC</h1>
+        </div>
+        <div class="col-6">
+          <span class="temp"><span class="emoji">☀️</span> 75 </span> <span class="units"> °C | °F </span></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h3>Monday 5:40PM</h3>
+        </div>
+      </div>
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-6">Sunny</div>
+        </div>
+        <div class="row">
+          <div class="col-6">High: 78<span class="degrees">°C | °F</span></div>
+        </div>
+        <div class="row">
+          <div class="col-6">Low: 71<span class="degrees">°C | °F</span></div>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+        <div class="row">
+          <div class="col">
+            Tuesday
+            <div>🌤</div>
+            <div>77<span class="degrees">°C | °F</span></div>
+            <div><span class="low">72<span class="degrees">°C | °F</span> </span></div>
+          </div>
+          <div class="col">
+            Wednesday
+            <div>🌤</div>
+            <div>80<span class="degrees">°C | °F</span></span></div>
+            <div><span class="low">75<span class="degrees">°C | °F</span></span></div>
+          </div>
+          <div class="col">
+            Thursday
+            <div>☀️</div>
+            <div>75<span class="degrees">°C | °F</span></div>
+            <div><span class="low"> 67<span class="degrees">°C | °F </span></span></div>
+          </div>
+          <div class="col">
+            Friday
+            <div>🌧</div>
+            <div>73<span class="degrees">°C | °F</span></div>
+            <div><span class="low"> 68<span class="degrees">°C | °F </span></span></div>
+          </div>
+          <div class="col">
+            Saturday
+            <div>☀️</div>
+            <div>77<span class="degrees">°C | °F</span></div>
+            <div><span class="low"> 68<span class="degrees">°C | °F</span></span></div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-6">Sunrise: 6:55AM</div>
+          <div class="col-6">Precipitation: 3%</div>
+        </div>
+        <div class="row">
+          <div class="col-6">Sunset: 7:28PM</div>
+          <div class="col-6">Wind: 5mph</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -47,9 +47,7 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function searchLocation(position) {
   let apiKey = "7d81cb66d2a78969cfec2f704335508f";
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -66,8 +64,16 @@ function displayWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
-    response.data.weather.description;
+    response.data.weather[0].main;
 }
 
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", getCurrentLocation);
+
+function searchCity(city) {
+  let apiKey = "7d81cb66d2a78969cfec2f704335508f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+searchCity("Washington DC");

@@ -78,7 +78,10 @@ form {
 }
 
 .current-location-button {
+  display: block;
+  margin: 0 auto;
   padding: 0 auto;
   background-color: white;
   border: none;
+  top: 30px;
 }

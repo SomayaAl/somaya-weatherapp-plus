@@ -47,7 +47,8 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function searchLocation(position) {
   let apiKey = "7d81cb66d2a78969cfec2f704335508f";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
 }
 
